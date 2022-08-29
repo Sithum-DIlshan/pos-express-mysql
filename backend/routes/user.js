@@ -23,11 +23,10 @@ app.use(express, json())
 router.get('/', async (req, res) => {
     try {
         // const users = await User.find()
-        var query = "SELECT * FROM Customer"
+        var query = "SELECT * FROM User"
         connection.query(query, (err, rows)=>{
             if (err) throw err
-
-                res.send(rows)
+                res.send('user get')
         })
     } catch (err) {
 
