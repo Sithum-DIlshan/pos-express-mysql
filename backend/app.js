@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 8000
-
-var cors = require('cors')
-app.use(cors())
-
+const port = 5000
 const User = require('./routes/user')
+var cors = require('cors')
+
+app.use(cors())
+app.use(express.json())
 
 app.use('/user', User)
 
