@@ -10,8 +10,9 @@ export default function Login(props) {
     const [password, setPassword] = useState(null);
 
     const login = async (e)=> {
-        let newVar = await UserService.fetchUser();
-        console.log(newVar)
+        // let newVar = await UserService.fetchUser();
+        // console.log(newVar)
+        navigate('/dashboard')
     }
 
     return(
@@ -26,7 +27,7 @@ export default function Login(props) {
                 </Stack>
                 <Stack justifyContent={'center'} alignItems={'center'} mt={7}>
                     <Box>
-                        <Link to="/dashboard" style={{ textDecoration: 'none' }}> <Button sx={{textTransform:'none', backgroundColor:'#8a69ec', color:'white'}} variant={'contained'} onClick={login}>Login</Button></Link>
+                        {/*<Link to="/dashboard" style={{ textDecoration: 'none' }}> */}<Button sx={{textTransform:'none', backgroundColor:'#8a69ec', color:'white'}} variant={'contained'} onClick={login}>Login</Button>{/*</Link>*/}
                 </Box>
                 </Stack>
                 <Stack mt={7} ml={12}>

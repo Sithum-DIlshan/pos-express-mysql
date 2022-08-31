@@ -1,10 +1,10 @@
 import axios from "../axios";
 
 
-class UserService {
-    fetchUser = async () => {
+class ProductService {
+    fetchProduct = async () => {
         const promise = new Promise((resolve, reject) => {
-            axios.get('user')
+            axios.get('product')
                 .then((res)=>{
                     return resolve(res)
                 })
@@ -14,9 +14,9 @@ class UserService {
         })
         return await promise;
     }
-    postUser = async (data) => {
+    postProduct = async (data) => {
         const promise = new Promise((resolve, reject) => {
-            axios.post('user', {data: data})
+            axios.post('product', {data: data})
                 .then((res)=>{
                     return resolve(res)
                 })
@@ -28,4 +28,4 @@ class UserService {
     }
 }
 
-export default new UserService()
+export default new ProductService()
