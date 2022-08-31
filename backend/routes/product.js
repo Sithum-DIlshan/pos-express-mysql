@@ -23,7 +23,7 @@ connection.connect(function (err) {
 router.get('/', async (req, res) => {
     try {
         // const users = await User.find()
-        var query = "SELECT * FROM User"
+        var query = "SELECT * FROM Product"
         connection.query(query, (err, rows) => {
             if (err) res.send(err)
             res.send(rows)
@@ -35,7 +35,6 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         // const users = await User.find()
-        console.log(req.body.data)
 
         // let data = {
         //     first_name: req.body.first_name,
@@ -54,11 +53,11 @@ router.post('/', async (req, res) => {
         // console.log(req.body.first_name)
         let data = JSON.parse(req.body.data)
 
-        var query = "INSERT INTO User SET ?"
+        var query = "INSERT INTO Product SET ?"
 
         connection.query(query, data, (err, rows) => {
             if (err) res.send(err)
-            res.send('user post done')
+            res.send('product post done')
         })
     } catch (err) {
 
