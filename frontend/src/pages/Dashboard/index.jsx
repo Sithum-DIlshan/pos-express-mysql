@@ -3,8 +3,10 @@ import DashboardHome from "../DashboardHome";
 import { Routes, Route, Link } from "react-router-dom";
 import ProductManage from "../Product";
 import CartManage from "../Cart";
+import {useEffect} from "react";
 
 export default function Dashboard(props) {
+
     return (
         <>
             <Stack height={'100vh'} bgcolor={'#d9d9d9'}>
